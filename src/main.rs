@@ -1,5 +1,4 @@
 use bevy::prelude::*;
-use bevy_rapier3d::prelude::*;
 use bevy_third_person_camera::*;
 
 mod camera;
@@ -18,10 +17,6 @@ fn main() {
             CameraPlugin,
             WorldPlugin,
             ThirdPersonCameraPlugin,
-        ))
-        .add_plugins((
-            RapierPhysicsPlugin::<NoUserData>::default(),
-            RapierDebugRenderPlugin::default(),
         ))
         .run();
 }
